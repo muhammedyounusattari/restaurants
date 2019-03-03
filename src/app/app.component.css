@@ -1,0 +1,58 @@
+h1{
+  padding:11px 0px 0px 10px;;
+}
+.heading{
+  width:auto;
+  height:80px;
+  background-color: white;
+}
+.card{
+  float:left;
+  margin-left:20px;
+  margin-bottom: 17px;
+  height: 270px;
+  width:650px;
+  border-radius: 12px;
+  border:2px grey solid;
+}
+h6{
+  color:gray;
+}
+img{
+  width:170px;
+  height:170px;
+}
+
+input[type='text']{
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width:87%;
+  height:48px;
+  border-radius:10px;
+  margin-top:1px;
+  border:2px solid darkgreen;
+  padding-left: 10px;
+  margin-left: 21px;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+

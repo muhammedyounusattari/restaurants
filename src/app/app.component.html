@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="heading">
+  <h1 style="margin-left:5px">European Restaurants</h1>
+</div>
+
+<div class="container-fluid" >
+  
+<div class="inner-addon left-addon">  
+<i class="glyphicon glyphicon-search"></i>  
+<input type='text' [(ngModel)]='searchResult' placeholder="  Search (by name or cuisine)" />
+<span style="font-size:50px;padding-left:28px;"><i class="fa fa-filter" aria-hidden="true" ></i></span>
+</div>
+<br/>
+
+
+
+<div *ngFor="let data of restData | myfilter:searchResult | paginate:{itemsPerPage:4, currentPage: p}">   
+
+  <div class="card">
+    
+    <div class="card-body">
+      <table class="table">
+        <tr>
+          <td rowspan="4"> <img  src="../../../assets/logo.png" alt="Card image cap"></td><td><h6>{{data.name}}</h6></td>
+          <td><i class="fa fa-star" style="color:yellow" aria-hidden="true">&nbsp;&nbsp;<span style="color:orangered">{{data.rating}}</span></i></td></tr>
+          <tr><td>{{data.cuisineStyle}}</td><td></td><td></td></tr>
+          <tr><td>{{data.city}}</td><td></td><td></td></tr>          
+          <tr><td colspan="4">{{data.numberOfReviews}} reviews</td></tr>
+        </table>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<pagination-controls  directionLinks="true" (pageChange)="p=$event">
+  
+</pagination-controls>
+<router-outlet></router-outlet>
+
+
